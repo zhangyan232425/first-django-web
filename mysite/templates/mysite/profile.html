@@ -1,0 +1,78 @@
+{%extends 'mysite/base.html' %}
+{% block title%} Profile {%endblock%}
+{% block body %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'profile.css' %}">
+<div class= "container"  >
+	<div class = "row">
+		<div class = "col-md-12 text-center">
+			<h2 class="section-heading text-uppercase"> About Me</h2>
+			<h3 class="section-subheading text-muted">hahahah</h3>	
+		</div>
+	</div>
+
+	<div class = "row">
+		<div class = "col-md-12">
+			<ul class = "timeline">
+				<li > 
+					<div class="timeline-image" >
+                     <img class="rounded-circle img-fluid" src="{% static 'Tsinghua.jpg'%}" alt="Tsinghua University">
+                   </div>
+                   <div class ="timeline-panel">
+                   		<div class ="timeline-heading">
+                   			<h4>2012-2017</h4>
+                   			<h4 class ="subheading"></h4>
+                   		</div>
+                   		<div class ="timeline-body">
+                   			<p> This is the part for detail in Tsinghua University
+
+                   	        </p>
+                   		</div>
+                   </div>
+				</li>
+
+
+				<li class="timeline-inverted">
+					<div class="timeline-image">
+                     <img class="rounded-circle img-fluid" src="{% static 'Tsinghua.jpg'%}" alt="Tsinghua University">
+                   </div>
+                   <div class ="timeline-panel">
+                   		<div class ="timeline-heading">
+                   			<h4>2012-2017</h4>
+                   			<h4 class ="subheading"></h4>
+                   		</div>
+                   		<div class ="timeline-body">
+                   			<p> This is the part for detail in Tsinghua University
+
+                   	        </p>
+                   		</div>
+                   </div>
+				</li>
+
+
+				<li class-"timeline-inverted">
+					<div class="timeline-image">
+                     <img class="rounded-circle img-fluid" src="{% static 'Tsinghua.jpg'%}" alt="Tsinghua University">
+                   </div>
+                   <div class ="timeline-panel">
+                   		<div class ="timeline-heading">
+                   			<h4>2012-2017</h4>
+                   			<h4 class ="subheading"></h4>
+                   		</div>
+                   		<div class ="timeline-body">
+                   			<p> This is the part for detail in Tsinghua University
+
+                   	        </p>
+                   		</div>
+                   </div>
+				</li>
+
+
+				
+
+			</ul>
+		</div>
+	</div>
+
+</div>
+{% endblock %}

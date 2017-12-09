@@ -1,0 +1,12 @@
+
+body{
+	background: black url("background.png")
+}
+
+.navbar{
+  border-radius: 0;   
+}
+
+.navbar-brand{
+  font-family: 'Sofia',cursive;
+}

@@ -1,0 +1,63 @@
+{%extends 'mysite/base.html' %}
+{% block title%} Notebook {%endblock%}
+
+{% block body %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'notebook.css' %}">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<header>
+	<div class = "notebook-head">
+		<div class = "container">
+			<h1 class = "notebook-title">
+				Study Note
+			</h1>
+			<p>
+				My own programming note book
+			</p>
+		</div>
+	</div>
+</header>
+
+<main class ="container">
+	<div class = "row">
+		<div class="col-sm-8 blog-main">
+			<div class="blog-post">
+				<h2 class = "note-title">To Search Scrapy</h2>
+				<p class = "note-time">
+                   January 21,2017
+					<a href="https://docs.scrapy.org/en/latest/index.html">Scrapy</a>
+				</p>
+				<p>
+                   \(a \ne 0\) $y_i$
+           
+				</p>	
+			</div>
+
+			<div class="blog-post">
+				faaf
+			</div>
+
+			<div class="blog-post">
+				faaf
+			</div>
+		</div>
+	</div>
+</main>
+
+<aside class="col-sm-3 ml-sm-auto blog-sidebar">
+	<div class="sidebar-module sidebar-module-inset">
+		<h1 class = "sidebar-text">haha</h1>
+		<h1 class = "sidebar-text">hello there!</h1>
+	</div>
+
+	<div class = "sidebar-module"> 
+		
+			<ul>haha1</ul>
+			<ul>haha2</ul>
+		
+	</div>
+
+</aside>
+
+
+{% endblock %}
