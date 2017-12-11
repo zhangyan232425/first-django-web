@@ -3,10 +3,49 @@ body{
 	background: black url("background.png")
 }
 
+
+
 .navbar{
-  border-radius: 0;   
+  border-radius: 0;  
+  
+  
 }
 
 .navbar-brand{
   font-family: 'Sofia',cursive;
+  
+   
 }
+
+.nav a{ 
+    
+    }
+/*
+
+.nav .glyphicon {
+    font-size: 20px;
+}
+
+
+
+.form-control{
+	height: 50px;
+
+	}
+
+form  .glyphicon{
+
+	font-size: 30px;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
