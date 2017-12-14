@@ -1,54 +1,43 @@
 {% load staticfiles %}
 
-.container-index{
-	margin-top:-25px; 
-	margin-bottom:0px;
-	 
-}
-
-
-.pad1{
-background: url("index_1.jpg");
-}
-.pad2{
-background: url("index_1.jpg");
-opacity: 0.7;
-}
-.pad3{
-background: url("index_2.jpg");
-opacity: 0.7;
-}
-.pad4{
-background: url("index_2.jpg");
+.backset {
+background-image: url("index_1.jpg");
+opacity:0.8;
+background-size: cover;
+height:100%; 
+width: 100%;
+position:absolute; 
+margin-top:-20px;"
 }
 
 .col-md-6{
-	
-	padding: 11.5% ;	
-    background-size:cover; 
+padding: 30px;
 }
 
 
 .text{
-	margin-top: -150px;
-	margin-left: -100px;
-	opacity: 1;	
+	font-family: Shrikhand,fantasy; 
 
-}
-.index-text{
-	
-	text-shadow: 3px 3px 0px #000；
-	font-family: sofia;
-font-weight:900;
-opacity: 1;
-}
+	font-size: 150%;
 
+	font-weight: 90;
 
-
-
+	color: #662200;
 
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,5 +1,5 @@
 .section-heading{
-font-family: amaranth;
+font-family: fantasy;
 font-weight: 900;
 }
 
@@ -7,32 +7,40 @@ font-weight: 900;
   margin-top: 50px;
   position: relative;
   padding: 0;
-  list-style: none; }
-  .timeline:before {
+  list-style: none; 
+  
+}
+
+.timeline:before {
+
     position: absolute;
     top: 0;
     bottom: 0;
     left: 40px;
-    width: 2px;
+    width: 3px;
     margin-left: -1.5px;
     content: '';
-    background-color: #000000; }
-  .timeline > li {
+    background-color: #003333; }
+
+.timeline > li {
     position: relative;
-    min-height: 50px;
-    margin-bottom: 50px; }
-    .timeline > li:after, .timeline > li:before {
+    min-height: 10px;
+    margin-bottom: 30px; }
+
+.timeline > li:after, .timeline > li:before {
       display: table;
       content: ' '; }
-    .timeline > li:after {
+    
+.timeline > li:after {
       clear: both; }
-    .timeline > li .timeline-panel {
+.timeline > li .timeline-panel {
       position: relative;
       float: right;
       width: 100%;
-      padding: 0 20px 0 100px;
+      padding: 0 20px 0px 150px;
       text-align: left; }
-      .timeline > li .timeline-panel:before {
+      
+.timeline > li .timeline-panel:before {
         right: auto;
         left: -15px;
         border-right-width: 15px;
@@ -44,16 +52,17 @@ font-weight: 900;
         border-left-width: 0; }
     .timeline > li .timeline-image {
       position: absolute;
+      max-width: 100%;
       z-index: 100;
       left: 0;
-      width: 50%;
-      height: 50%;
       margin-left: 0;
-      text-align: center; 
+      text-align: center;
       
        }
     .img-fluid{
-        border:3px solid lightgray;
+        height: 130px;
+        width: 130px;
+        border: 5px solid #ccccb3;
         border-radius: 25px;
        }
       .timeline > li .timeline-image h4 {
@@ -62,7 +71,7 @@ font-weight: 900;
         margin-top: 12px; }
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
-      padding: 0 20px 0 100px;
+      padding: 0 20px 50px 150px;
       text-align: left; }
       .timeline > li.timeline-inverted > .timeline-panel:before {
         right: auto;
@@ -77,12 +86,17 @@ font-weight: 900;
     .timeline > li:last-child {
       margin-bottom: 0; }
   .timeline .timeline-heading h4 {
+    font-family: 'Tangerine';
+    font-size: 500%;
     margin-top: 0;
     color: inherit; }
-    .timeline .timeline-heading h4.subheading {
+    .timeline .timeline-heading h2.subheading {
+      
+      margin-left: 0px;
       text-transform: none; }
   .timeline .timeline-body > ul,
   .timeline .timeline-body > p {
+    font-family: "Comic Sans MS";
     margin-bottom: 0; }
 
 @media (min-width: 768px) {
