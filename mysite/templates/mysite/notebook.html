@@ -18,9 +18,14 @@
 	</div>
 </header>
 
-
-
-
-
+<div class="row">
+    <div class="row-fluid">
+    {% for blog in object_list %}
+    <div class="col-md-4">
+        <h3>{{ blog.note_title }}</h3>               
+    </div>
+    {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

@@ -20,8 +20,11 @@ class ProfileView(generic.ListView):
 
 class NotebookView(generic.ListView):
 	template_name = 'mysite/notebook.html'
-	def get_queryset(self):
-		return None
+	model = Notebook
+	def get_context_data(self,**kwargs):
+		context = super().get_context_data(**kwargs)
+		notebook_list = context['object_list']
+		return context
 
 class ProjectView(generic.ListView):
 	template_name = 'mysite/project.html'
