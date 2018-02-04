@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+.backset {
+background-image: url("index_1.jpg");
+opacity:0.8;
+background-size: cover;
+height:100%; 
+width: 100%;
+position:absolute; 
+margin-top:-20px;"
+}
+
+.col-md-6{
+padding: 30px;
+}
+
+
+.text{
+	font-family: Shrikhand,fantasy; 
+
+	font-size: 150%;
+
+	font-weight: 90;
+
+	color: #662200;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+{%extends 'mysite/base.html' %}
+{% block title%} Profile {%endblock%}
+{% block body %}
+{% load static %}
+<html>
+    <head>
+        {{ form.media }}
+    </head>
+    <body>
+        <form method="POST" action="">{% csrf_token %}
+            {{ form }}
+        </form>
+    </body>
+</html>
+{% endblock %}

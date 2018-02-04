@@ -1,0 +1,54 @@
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+.cover-container {
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cover-heading{
+font-size: 800%;
+font-family:Ranchers;
+margin-bottom: 40px;
+
+}
+
+.lead{
+margin-bottom: 80px;
+font-family: Lobster;
+font-size: 250%;
+}
+
+
+.cover .btn-lg {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+.mastfoot {
+  color: rgba(255,255,255,.5);
+  position: fixed;
+  bottom: 0;
+  left: 45%;
+}
+
+.inner{
+vertical-align: middle;
+
+}
+  
+
+

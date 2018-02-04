@@ -1,0 +1,30 @@
+.notebook-title{
+  margin-bottom: 0;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.note-title{
+font-family:cursive; 
+font-size: 2rem;
+margin-bottom: 1rem;
+margin-top: 0.1rem;
+
+}
+
+.note-time{
+margin-bottom: 1.25rem;
+  color: #999;
+}
+
+.sidebar-module-inset {
+  padding: 1rem;
+  background-color: #DCDCDC;
+  border-radius: .25rem;
+}
+
+.sidebar-text{
+color: #000000;
+
+
+}

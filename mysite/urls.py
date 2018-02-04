@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from . import views
+from django.views.generic.edit import FormView
+from django.conf.urls import include
+from mysite.form import BlogForm
 
 app_name = "mysite"
 urlpatterns = [
@@ -23,4 +26,6 @@ urlpatterns = [
     url(r'profile/$',views.ProfileView.as_view(),name = 'profile'),
     url(r'notebook/$',views.NotebookView.as_view(),name = 'notebook'),
     url(r'project/$',views.ProjectView.as_view(),name = 'project'),
+    url(r'notebook/create/$', FormView.as_view(template_name="mysite/notebook_form.html",
+                                form_class=BlogForm)),
 ]
