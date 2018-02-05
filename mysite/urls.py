@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'index/$',views.IndexView.as_view(),name = 'index'),
     url(r'profile/$',views.ProfileView.as_view(),name = 'profile'),
     url(r'notebook/$',views.NotebookView.as_view(),name = 'notebook'),
+    url(r'notebook/(?P<id>\d+)/$',views.NotebookDetail,name='notebook_detail'),
     url(r'project/$',views.ProjectView.as_view(),name = 'project'),
-    url(r'notebook/create/$', FormView.as_view(template_name="mysite/notebook_form.html",
-                                form_class=BlogForm)),
+    url(r'notebook/create/$', FormView.as_view(template_name="mysite/notebook_form.html",form_class=BlogForm)),
 ]

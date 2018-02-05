@@ -1,22 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.views import generic
 from django.urls import reverse
 from .models import Notebook
 
-class CoverView(generic.ListView):
+class CoverView(generic.TemplateView):
 	template_name = 'mysite/cover.html'
-	def get_queryset(self):
-		return Notebook.objects.all()
+	
 
-class IndexView(generic.ListView):
+class IndexView(generic.TemplateView):
 	template_name = 'mysite/index.html'
-	def get_queryset(self):
-		return None
+	
 
-class ProfileView(generic.ListView):
+class ProfileView(generic.TemplateView):
 	template_name = 'mysite/profile.html'
-	def get_queryset(self):
-		return None
 
 class NotebookView(generic.ListView):
 	template_name = 'mysite/notebook.html'
@@ -26,6 +22,14 @@ class NotebookView(generic.ListView):
 		notebook_list = context['object_list']
 		return context
 
+def NotebookDetail(request,id = None):
+	template_name = 'mysite/notebook_detail.html'
+	instance = get_object_or_404(Notebook,id = id)
+	context ={
+	"title":instance.note_title,
+	}
+	return render(request,template_name,context)
+	
 class ProjectView(generic.ListView):
 	template_name = 'mysite/project.html'
 	def get_queryset(self):
