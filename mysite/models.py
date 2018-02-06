@@ -4,7 +4,7 @@ from django.urls import reverse
 class  Notebook(models.Model):
 	note_title = models.CharField(max_length=500)
 	note_time = models.DateTimeField('data published')
-	note_body = models.TextField()
+	note_body = models.TextField(default=None,blank=True,null=True)
 
 	def __unicode__(self):
 		return self.note_title

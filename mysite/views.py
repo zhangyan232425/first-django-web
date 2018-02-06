@@ -1,7 +1,9 @@
 from django.shortcuts import render,get_object_or_404
+from django.http import HttpResponseRedirect
 from django.views import generic
 from django.urls import reverse
 from .models import Notebook
+from mysite.form import BlogForm
 
 class CoverView(generic.TemplateView):
 	template_name = 'mysite/cover.html'
@@ -29,6 +31,28 @@ def NotebookDetail(request,id = None):
 	"title":instance.note_title,
 	}
 	return render(request,template_name,context)
+
+
+	
+def NotebookCreate(request):
+	#if not request.user.is_staff or not request.user.is_superuser:
+	#	raise Http404
+		
+	form = BlogForm(data=request.POST)
+	if form.is_valid():
+		instance = form.save(commit=False)
+		instance.user = request.user
+		instance.save()
+		# message success
+		#messages.success(request, "Successfully Created")
+		return HttpResponseRedirect(instance.get_absolute_url())
+	context = {
+		"form": form,
+	}
+	return render(request, "mysite/notebook_form.html", context)
+
+
+
 	
 class ProjectView(generic.ListView):
 	template_name = 'mysite/project.html'
