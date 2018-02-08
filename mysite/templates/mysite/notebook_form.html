@@ -1,16 +1,21 @@
 {%extends 'mysite/base.html' %}
-{% block title%} Profile {%endblock%}
-{% block body %}
-{% load static %}
-<html>
-    <head>
-        {{ form.media }}
-    </head>
-    <body>
+{% load crispy_forms_tags %}
+
+{% block head %} 
+{{ form.media }}
+{% endblock head %}
+
+{% block body %} 
+    	<div class='col-sm-6 col-sm-offset-3' >
         <form method="POST" action='' enctype='nultipart/form-data'>{% csrf_token %}
-            {{ form }} 
+            {{ form|crispy }} 
             <input type='submit' value='submit' />
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
         </form>
-    </body>
-</html>
+        </div>
 {% endblock %}

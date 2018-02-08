@@ -1,33 +1,41 @@
 {%extends 'mysite/base.html' %}
+
+{% load staticfiles %}
 {% block title%} Notebook {%endblock%}
 
 {% block body %}
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'notebook.css' %}">
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-<header>
-	<div class = "notebook-head">
-		<div class = "container">
-			<h1 class = "notebook-title">
-				Study Note
-			</h1>
-			<p>
-				My own programming note book
-			</p>
-		</div>
-	</div>
-</header>
 
-<div class="row">
-    <div class="row-fluid">
-    {% for blog in object_list %}
-    <div class="col-md-4">
-        <h3><a href = '{{ blog.get_absolute_url }}'>{{ blog.note_title }}</a></h3>   
-        <p>{{blog.note_body}}</p>           
-    </div>
-    {% endfor %}
-    </div>
+<div class='col-sm-6 col-sm-offset-3'>
+    <form method='GET' action='' class='row'>
+        <div class='col-sm-6'>
+            <div class='input-group'>
+                <input class='form-control' type='text' name='q' placeholder='Search posts' value='{{ request.GET.q }}'/>
+                <span class='input-group-btn'>
+                    <!-- <input class='btn btn-default' type='submit' value='Search' /> -->
+                    <button class='btn btn-default' type='submit'>Search <i class='fa fa-search'></i></button>
+                </span>
+            </div>
+        </div>
+	</form>
 </div>
 
+{% for obj in object_list %}
+<div class='row'>
+  <div class='col-sm-6 col-sm-offset-3'>
+    <div class='thumbnail'>
+        {% if obj.image %}
+         <img src='{{ obj.image.url }}' class='img-responsive' />
+        {% endif %}
+      <div class='caption post-detail-item'>
+        {% if obj.draft %}<h3>Staff only: Draft</h3>{% endif %} {% if obj.publish > today %}<h3>Staff Only: Future Post</h3>{% endif %}
+        <h3><a href='{{ obj.get_absolute_url }}'>{{ obj.note_title }}</a> <small>{{ obj.note_time }}</small></h3>
+        {{ obj.get_markdown|truncatechars_html:120 }}
+        <p><a href='{{ obj.get_absolute_url }}' class='btn btn-primary' role='button'>View</a></p>
+      </div>
+    </div>
+  </div>
+<hr/>
+</div>
+{% endfor %}
 
 {% endblock %}

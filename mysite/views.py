@@ -4,6 +4,8 @@ from django.views import generic
 from django.urls import reverse
 from .models import Notebook
 from mysite.form import BlogForm
+from markdown_deux import markdown
+from django.utils.safestring import mark_safe
 
 class CoverView(generic.TemplateView):
 	template_name = 'mysite/cover.html'
@@ -29,6 +31,7 @@ def NotebookDetail(request,id = None):
 	instance = get_object_or_404(Notebook,id = id)
 	context ={
 	"title":instance.note_title,
+	"content":mark_safe(markdown(instance.note_body)),
 	}
 	return render(request,template_name,context)
 
